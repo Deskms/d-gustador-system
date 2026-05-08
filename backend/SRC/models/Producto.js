@@ -27,7 +27,10 @@ id_categoria: {
         model: 'categorias',  
         key: 'id'
     }
-}
-})
+} },
+    {
+        tablaName: 'productos',
+        timestamps: false
+});
 
 module.exports = Producto;
