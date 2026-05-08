@@ -11,7 +11,10 @@ const Categoria = sequelize.define('Categoria', {
     nombre: {
         type: DataTypes.STRING(150),
         allowNull : false
-    }
-});
+    } },
+    {
+    tableName: 'categorias',
+    timestamps: false
+}); 
 
 module.exports = Categoria;
