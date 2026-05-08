@@ -29,5 +29,5 @@ El sistema maneja las siguientes entidades:
 mysql -u root -p < database/schema.sql
 ```
 
-## 👨‍💻 Autor
+##  Autor
 Dominic — [@Deskms](https://github.com/Deskms)
