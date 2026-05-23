@@ -15,7 +15,9 @@ const Sabores = sequelize.define('Sabores',{
     descripcion: {
         type: DataTypes.STRING(150),
         allowNull: true
-    }
-})
+    }}, {
+    tableName: 'sabores',
+    timestamps: false
+});
 
 module.exports = Sabores;

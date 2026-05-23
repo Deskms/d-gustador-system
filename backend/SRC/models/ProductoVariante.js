@@ -28,7 +28,9 @@ const ProductoVariante = sequelize.define('ProductoVariante', {
     puntos_que_da: {
         type: DataTypes.INTEGER,
         allowNull: true
-    }
+    }}, {
+    tableName: 'producto_variante',
+    timestamps: false
 })
 
 module.exports = ProductoVariante;
