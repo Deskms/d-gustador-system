@@ -5,6 +5,7 @@ const categoriaRoutes = require('./SRC/routes/categoriaRoutes.js');
 const productoRoutes = require('./SRC/routes/productoRoutes.js');
 const saborRoutes = require('./SRC/routes/saborRoutes.js'); 
 const productoVarianteRoutes = require('./SRC/routes/productoVarianteRoutes.js');
+const clienteRouter = require('./SRC/routes/clientesRoutes.js');
 
 require('dotenv').config();
 
@@ -16,6 +17,7 @@ app.use('/api/categorias', categoriaRoutes);
 app.use('/api/productos', productoRoutes);
 app.use('/api/sabores', saborRoutes);
 app.use('/api/variantes', productoVarianteRoutes);
+app.use('/api/clientes', clienteRouter);
 
 
 
