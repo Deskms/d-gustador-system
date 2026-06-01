@@ -38,6 +38,10 @@ const Pedidos = sequelize.define('Pedidos',{
         type: DataTypes.DATE, defaultValue: DataTypes.NOW,
         allowNull: false
     }
+    }, {
+    tableName: 'pedidos',
+    timestamps: false
+    
 })
 
 module.exports = Pedidos;

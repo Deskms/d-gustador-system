@@ -41,9 +41,9 @@ const remove = async (req, res) => {
 const getById = async (req, res) => {
     try {
         const { id } = req.params;
-        const cliente = await Clientes.findOne({ where: { id } });
-        if (!cliente) return res.status(404).json({ message: 'Cliente no encontrado' });
-        res.json(cliente);
+        const clientes = await Clientes.findOne({ where: { id } });
+        if (!clientes) return res.status(404).json({ message: 'Cliente no encontrado' });
+        res.json(clientes);
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
