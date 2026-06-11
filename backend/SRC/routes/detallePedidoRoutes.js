@@ -1,11 +1,12 @@
 const express = require ('express');
 const router = express.Router();
 const detallePedidoController = require("../controllers/detallePedidoController");
+const { verificarToken } = require('../middleware/authMiddleware');
 
-router.get('/', detallePedidoController.getAll);
-router.post('/', detallePedidoController.create);
-router.put('/:id', detallePedidoController.update);
-router.delete('/:id', detallePedidoController.remove);
-router.get('/:id', detallePedidoController.getById);
+router.get('/', verificarToken, detallePedidoController.getAll);
+router.post('/', verificarToken, detallePedidoController.create);
+router.put('/:id', verificarToken, detallePedidoController.update);
+router.delete('/:id', verificarToken, detallePedidoController.remove);
+router.get('/:id', verificarToken, detallePedidoController.getById);
 
 module.exports = router;

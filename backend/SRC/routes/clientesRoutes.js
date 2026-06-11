@@ -1,11 +1,12 @@
 const express = require ('express');
 const router = express.Router();
 const clienteController = require("../controllers/pedidoController");
+const { verificarToken } = require('../middleware/authMiddleware');
 
-router.get('/', clienteController.getAll);
-router.post('/', clienteController.create);
-router.put('/:id', clienteController.update);
-router.delete('/:id', clienteController.remove);
-router.get('/:id', clienteController.getById);
+router.get('/', verificarToken, clienteController.getAll);
+router.post('/', verificarToken, clienteController.create);
+router.put('/:id', verificarToken, clienteController.update);
+router.delete('/:id', verificarToken, clienteController.remove);
+router.get('/:id', verificarToken, clienteController.getById);
 
 module.exports = router;
