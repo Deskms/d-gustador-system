@@ -44,6 +44,9 @@ const DetallePedidos = sequelize.define('DetallePedidos',{
         type: DataTypes.DECIMAL(8,2),
         allowNull: false
     }
+}, {
+    tableName: 'detalle_pedidos',
+    timestamps: false,
 })
 
 module.exports = DetallePedidos;

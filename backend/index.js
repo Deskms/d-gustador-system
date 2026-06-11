@@ -7,6 +7,9 @@ const saborRoutes = require('./SRC/routes/saborRoutes.js');
 const productoVarianteRoutes = require('./SRC/routes/productoVarianteRoutes.js');
 const clienteRouter = require('./SRC/routes/clientesRoutes.js');
 const pedidoRouter = require ('./SRC/routes/pedidoRoutes.js');
+const detallePedidoRoutes = require('./SRC/routes/detallePedidoRoutes.js');
+const authRoutes = require('./SRC/routes/authRoutes.js');
+
 
 require('dotenv').config();
 
@@ -20,7 +23,9 @@ app.use('/api/sabores', saborRoutes);
 app.use('/api/variantes', productoVarianteRoutes);
 app.use('/api/clientes', clienteRouter);
 app.use('/api/pedidos', pedidoRouter);
-
+app.use('/api/detalles', detallePedidoRoutes);
+//Auth
+app.use('/api/auth', authRoutes);
 
 
 // Test de conexión a la base de datos
